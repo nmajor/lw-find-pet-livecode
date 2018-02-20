@@ -1,0 +1,6 @@
+<% @pets.each do |pet| %>
+  <div>
+    <%= link_to pet.name, pet_path(pet) %> <%= pet.lost ? 'lost' : 'found' %> - <%= link_to 'edit', edit_pet_path(pet) %>
+  </div>
+<% end %>
+<%= link_to 'New Lost Pet ;_;', new_pet_path %>
